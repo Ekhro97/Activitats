@@ -23,7 +23,7 @@ public class MasterMind {
 		
 		iniMostra(mostra);
 		System.out.println("Jugador1, intordueix els colors a endevinar un per un.");
-		colorsJugador(jugador1); // 1: BLANC – 2: NEGRE – 3: VERMELL – 4: LILA – 5: GROC – 6: CREMA
+		colorsJugador(jugador1); // 1: BLANC ï¿½ 2: NEGRE ï¿½ 3: VERMELL ï¿½ 4: LILA ï¿½ 5: GROC ï¿½ 6: CREMA
 		
 		System.out.println("Torn del jugador 2, intordueix els colors un per un.");
 		while (comptadorRondes < RONDES && victoria == false) {
@@ -129,6 +129,7 @@ public class MasterMind {
 		for(index1 = 0; index1 < jugador1.length; index1++){
 			if((jugador2[index1] == jugador1[index1])){
 				mostra[graella][index1] = "+";
+				posicio++;
 			}else if(mostra[graella][index1] == "0") {
 				mostra[graella][index1] = "X";
 			}
@@ -148,7 +149,7 @@ public class MasterMind {
 		
 		System.out.println("-------------------------------");
 		System.out.println("Introdueixi 4 colors un per un.");
-		System.out.println("Pots escollir entre BLANC – NEGRE – VERMELL – LILA – GROC – CREMA ");
+		System.out.println("Pots escollir entre BLANC ï¿½ NEGRE ï¿½ VERMELL ï¿½ LILA ï¿½ GROC ï¿½ CREMA ");
 		System.out.println("-------------------------------");
 		while(index < 4) {
 			color = Entrada.llegirString("Introdueix el color: ");
